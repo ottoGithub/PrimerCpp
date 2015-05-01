@@ -1,12 +1,14 @@
 #include "VectorT.h"
 #include <iostream>
+#include <vector>
 
+using namespace VectorTSpace;
 void main()
 {
-	int a[5] = { 0, 1, 2, 3, 4};
-
-	for(int last = 5,first = 0; last != first;)
-	{
-		a[--last] = -1;
-	}
+	VectorT<int>* pVec1 = new VectorT<int>();
+	pVec1->push_back(0);
+	pVec1->push_back(1);
+	//std::vector<int>* pVec2 = new std::vector<int>();
+	//pVec2->push_back(0);
+	//pVec2->push_back(1);
 }
