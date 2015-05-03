@@ -18,6 +18,15 @@
     <ClInclude Include="VectorT.h">
       <Filter>源文件</Filter>
     </ClInclude>
+    <ClInclude Include="CachedObj.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Typeid.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassMemberPointer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">

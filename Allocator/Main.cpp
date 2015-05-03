@@ -1,14 +1,13 @@
 #include "VectorT.h"
+#include "CachedObj.h"
+#include "Typeid.h"
+#include "ClassMemberPointer.h"
 #include <iostream>
 #include <vector>
-
-using namespace VectorTSpace;
 void main()
 {
-	VectorT<int>* pVec1 = new VectorT<int>();
-	pVec1->push_back(0);
-	pVec1->push_back(1);
-	//std::vector<int>* pVec2 = new std::vector<int>();
-	//pVec2->push_back(0);
-	//pVec2->push_back(1);
+	ExampleVectorT();
+	ExampleCachedObj();
+	ExampleTypeid();
+	ExampleClassMemberPointer();
 }

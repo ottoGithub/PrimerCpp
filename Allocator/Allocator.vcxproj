@@ -60,6 +60,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CachedObj.h" />
+    <ClInclude Include="ClassMemberPointer.h" />
+    <ClInclude Include="Typeid.h" />
     <ClInclude Include="VectorT.h" />
   </ItemGroup>
   <ItemGroup>
