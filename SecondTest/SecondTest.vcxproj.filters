@@ -18,12 +18,39 @@
     <ClInclude Include="LTexture.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="CActor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonDef.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="LTexture.cpp">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CActor.cpp">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Singleton.cpp">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
       <Filter>头文件</Filter>
     </ClCompile>
   </ItemGroup>
