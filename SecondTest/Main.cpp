@@ -1,4 +1,5 @@
 #include "StdAfx.h"
+/*
 #include <stdio.h>
 #include "LTexture.h"
 
@@ -219,3 +220,5 @@ int main( int argc, char* args[] )
 
 	return 0;
 }
+
+*/

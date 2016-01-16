@@ -5,8 +5,6 @@
 #include <SDL.h>
 #include <SDL_image.h>
 
-extern SDL_Renderer* gRenderer;
-
 //Texture wrapper class
 class LTexture
 {
