@@ -1,26 +1,11 @@
 #ifndef _COMMON_DEF_H_
 #define _COMMON_DEF_H_
+#include "Vector2D.h"
 
+const float MIN_FLOAT = 0.0001f;
 
-class Point
-{
-public:
-	Point(int xx, int yy)
-	{
-		x = xx;
-		y = yy;
-	}
-	int x;
-	int y;
-};
+const int VOLECITY_RUN = 96;
 
-enum eActorDir
-{
-	eUp = 0,
-	eRight,
-	eDwon,
-	eLeft,
-};
-
+const int ANIM_PLAY_FRAME_COUNT = 4;
 
 #endif

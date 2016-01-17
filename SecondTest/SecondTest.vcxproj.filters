@@ -18,9 +18,6 @@
     <ClInclude Include="LTexture.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="CActor.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="Singleton.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -39,15 +36,24 @@
     <ClInclude Include="Main.h">
       <Filter>源文件</Filter>
     </ClInclude>
+    <ClInclude Include="ActorManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MyPlayer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2D.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="LTexture.cpp">
-      <Filter>头文件</Filter>
-    </ClCompile>
-    <ClCompile Include="CActor.cpp">
       <Filter>头文件</Filter>
     </ClCompile>
     <ClCompile Include="Singleton.cpp">
@@ -59,10 +65,25 @@
     <ClCompile Include="StdAfx.cpp">
       <Filter>头文件</Filter>
     </ClCompile>
-    <ClCompile Include="Main2.cpp">
+    <ClCompile Include="GlobalValue.cpp">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ActorManager.cpp">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MyPlayer.cpp">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor.cpp">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManager.cpp">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="GlobalValue.cpp">
+    <ClCompile Include="Vector2D.cpp">
       <Filter>头文件</Filter>
     </ClCompile>
   </ItemGroup>

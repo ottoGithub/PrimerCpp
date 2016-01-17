@@ -3,19 +3,21 @@
 #include "Singleton.h"
 #include "CommonDef.h"
 
-class CActor;
+class Actor;
 class SceneManager : public Singleton<SceneManager>
 {
 public:
 	SceneManager();
 	~SceneManager();
+	void Tick(int nFrameTime);
 
 	void LoadScene(int SceneID);
-	void EnterScene(CActor* pActor);
-
+	void EnterScene(Actor* pActor);
+	void RenderScene();
 private:
 	int m_nCurrentSceneID;
-	Point m_DefaultBornPoint;
+	Vector2D m_DefaultBornPoint;
+	SDL_Rect m_rectClips;
 };
 
 #endif
