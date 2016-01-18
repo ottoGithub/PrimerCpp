@@ -70,6 +70,7 @@
     <ClInclude Include="CommonDef.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="GlobalValue.h" />
+    <ClInclude Include="KeyEventListenerManager.h" />
     <ClInclude Include="LTexture.h" />
     <ClInclude Include="Main.h" />
     <ClInclude Include="MyPlayer.h" />
@@ -85,6 +86,7 @@
     </ClCompile>
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="GlobalValue.cpp" />
+    <ClCompile Include="KeyEventListenerManager.cpp" />
     <ClCompile Include="LTexture.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MyPlayer.cpp" />

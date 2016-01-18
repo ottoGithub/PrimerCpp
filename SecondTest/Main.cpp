@@ -3,6 +3,7 @@
 #include <stdio.h>
 
 #include "GameManager.h"
+#include "KeyEventListenerManager.h"
 
 bool InitializeEngine()
 {
@@ -125,6 +126,10 @@ int main( int argc, char* args[] )
 			if( e.type == SDL_QUIT )
 			{
 				quit = true;
+			}
+			else if(e.type == SDL_KEYDOWN || e.type == SDL_KEYUP)
+			{
+				KeyEventListenerManager::Instance().HandlerKeyEvent(e.key);
 			}
 		}
 

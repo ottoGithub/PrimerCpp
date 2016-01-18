@@ -2,11 +2,15 @@
 #define _MYPLAYER_H_
 
 #include "Actor.h"
+#include "KeyEventListenerManager.h"
 
-class MyPlayer : public Actor
+class MyPlayer : public Actor, public IEventListener
 {
 public:
+	MyPlayer();
+	~MyPlayer();
 	void Tick(int nFrameTime);
+	void PostKeyEvent(SDL_KeyboardEvent& e);
 
 public:
 	void CalculateDirection();

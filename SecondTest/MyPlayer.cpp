@@ -1,11 +1,25 @@
 #include "StdAfx.h"
 #include "MyPlayer.h"
 
+MyPlayer::MyPlayer()
+{
+	ADD_TO_KEYEVENT_LISTENER(this);
+}
+
+MyPlayer::~MyPlayer()
+{
+	REMOVE_FROM_KEYEVENT_LISTENER(this);
+}
 
 void MyPlayer::Tick(int nFrameTime)
 {
 	CalculateDirection();
 	Actor::Tick(nFrameTime);
+}
+
+void MyPlayer::PostKeyEvent(SDL_KeyboardEvent& e)
+{
+
 }
 
 void MyPlayer::CalculateDirection()
