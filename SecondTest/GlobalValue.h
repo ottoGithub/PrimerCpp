@@ -8,9 +8,25 @@
 const int SCREEN_WIDTH = 640;
 const int SCREEN_HEIGHT = 480;
 
+const int LEVEL_WIDTH = 1280;
+const int LEVEL_HEIGHT = 960;
+
+const int CHARACTER_W = 32;
+const int CHARACTER_H = 48;
+
+const int TILE_WIDTH = 32;
+const int TILE_HEIGHT = 32;
+
+const int TOTAL_TILES = 192;
+const int TOTAL_TILE_SPRITES = 12;
+
+
 extern SDL_Window* gWindow;
 extern SDL_Renderer* gRenderer;
-extern LTexture gSheetTexture;
+
+extern SDL_Rect gTileClips[ TOTAL_TILE_SPRITES ];
+
+extern LTexture gTileTexture;
 extern LTexture gCharacterTexture;
 
 enum eWalkingAnimDirection

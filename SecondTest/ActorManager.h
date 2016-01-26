@@ -3,8 +3,8 @@
 
 #include "Singleton.h"
 #include <map>
+#include "Actor.h"
 
-class Actor;
 class MyPlayer;
 
 enum eObjType
@@ -22,6 +22,7 @@ public:
 
 	void CreateActor(int guid, int nActorType);
 	MyPlayer* GetMyPlayer() { return m_pMyPlayer; }
+	Actor* GetActorByGuid(int guid);
 
 	void Tick(int nFrameTime);
 private:

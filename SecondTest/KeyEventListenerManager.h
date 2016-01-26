@@ -6,7 +6,7 @@
 class IEventListener
 {
 public:
-	virtual void PostKeyEvent(SDL_KeyboardEvent& e) = 0;
+	virtual void PostKeyEvent(SDL_Event& e) = 0;
 };
 
 class KeyEventListenerManager : public Singleton<KeyEventListenerManager>
@@ -15,7 +15,7 @@ public:
 	void AddListener(IEventListener* listener);
 	void RemoveListener(IEventListener* listener);
 
-	void HandlerKeyEvent(SDL_KeyboardEvent& e);
+	void HandlerEvent(SDL_Event& e);
 private:
 	std::vector<IEventListener*> m_Listeners;
 };

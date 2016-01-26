@@ -8,8 +8,12 @@ SDL_Window* gWindow = NULL;
 //The window renderer
 SDL_Renderer* gRenderer = NULL;
 
-LTexture gSheetTexture;
+SDL_Rect gTileClips[ TOTAL_TILE_SPRITES ];
+
+LTexture gTileTexture;
 LTexture gCharacterTexture;
+
+
 
 int gGameStateID = eGameState_LoadScene;
 

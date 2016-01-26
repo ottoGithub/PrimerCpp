@@ -9,16 +9,16 @@ void GameManager::EnterGameState(int nStateID)
 	if(gGameStateID == eGameState_LoadScene)
 	{
 		SceneManager::Instance().LoadScene(0);
-		ActorManager::Instance().CreateActor(0, ObjType_MyPlayer);
+		ActorManager::Instance().CreateActor(0x0001, ObjType_MyPlayer);
 		SceneManager::Instance().EnterScene((Actor*)ActorManager::Instance().GetMyPlayer());
 		
-		for(int x = 0, i = 0; x < gCharacterTexture.getWidth(); x += 32, ++i)
-			for(int y = 0, j = 0; y < gCharacterTexture.getHeight(); y += 48, ++j)
+		for(int x = 0, i = 0; x < gCharacterTexture.getWidth(); x += CHARACTER_W, ++i)
+			for(int y = 0, j = 0; y < gCharacterTexture.getHeight(); y += CHARACTER_H, ++j)
 			{
 				gRectCharterAnim[j][i].x = x;
 				gRectCharterAnim[j][i].y = y;
-				gRectCharterAnim[j][i].w = 32;
-				gRectCharterAnim[j][i].h = 48;
+				gRectCharterAnim[j][i].w = CHARACTER_W;
+				gRectCharterAnim[j][i].h = CHARACTER_H;
 			}
 	}
 }

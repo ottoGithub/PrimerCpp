@@ -64,7 +64,7 @@ void ShutdownEngine()
 
 bool GameInitialize()
 {
-	if( !gSheetTexture.loadFromFile( "ytty.png" ) )
+	if( !gTileTexture.loadFromFile( "ytty.png" ) )
 	{
 		printf( "Failed to load ytty texture image!\n" );
 		return false;
@@ -80,7 +80,7 @@ bool GameInitialize()
 
 void GameShutdown()
 {
-	gSheetTexture.free();
+	gTileTexture.free();
 	gCharacterTexture.free();
 }
 
@@ -127,12 +127,11 @@ int main( int argc, char* args[] )
 			{
 				quit = true;
 			}
-			else if(e.type == SDL_KEYDOWN || e.type == SDL_KEYUP)
+			else
 			{
-				KeyEventListenerManager::Instance().HandlerKeyEvent(e.key);
+				KeyEventListenerManager::Instance().HandlerEvent(e);
 			}
 		}
-
 		nStartTime = SDL_GetTicks();
 		
 		GameLoop(nFrameTime);

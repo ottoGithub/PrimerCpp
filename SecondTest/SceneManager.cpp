@@ -28,10 +28,11 @@ void SceneManager::LoadScene(int SceneID)
 
 void SceneManager::RenderScene()
 {
-	for(int x = 0; x < SCREEN_WIDTH; x+=32)
-		for(int y = 0; y < SCREEN_HEIGHT; y+=32)
+	//TODO:此处通过map数据读取
+	for(int x = 0; x < LEVEL_WIDTH; x+=32)
+		for(int y = 0; y < LEVEL_HEIGHT; y+=32)
 		{
-			gSheetTexture.render( x, y, &m_rectClips );
+			gTileTexture.render( x, y, &m_rectClips );
 		}
 }
 

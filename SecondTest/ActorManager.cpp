@@ -1,34 +1,48 @@
 #include "stdafx.h"
 #include "ActorManager.h"
-#include "Actor.h"
 #include "MyPlayer.h"
+#include "Camera.h"
 
-	ActorManager::ActorManager()
+ActorManager::ActorManager()
+{
+}
+void ActorManager::CreateActor(int guid, int nActorType)
+{
+	ActorMap::const_iterator iter = m_ActorMap.find(guid);
+	if(iter != m_ActorMap.end())
 	{
+		return;
 	}
-	void ActorManager::CreateActor(int guid, int nActorType)
+	Actor* pActor = NULL;
+	//pActor->InitialComponents();
+	if(nActorType == ObjType_MyPlayer)
 	{
-		ActorMap::const_iterator iter = m_ActorMap.find(guid);
-		if(iter != m_ActorMap.end())
-		{
-			return;
-		}
-		Actor* pActor = NULL;
-		//pActor->InitialComponents();
-		if(nActorType == ObjType_MyPlayer)
-		{
-			pActor = new MyPlayer();
-			pActor->SetGuid(guid);
-			m_pMyPlayer = (MyPlayer*)pActor;
-		}
-		m_ActorMap.insert(ActorMap::value_type(guid,pActor));
+		pActor = new MyPlayer();
+		pActor->SetGuid(guid);
+		m_pMyPlayer = (MyPlayer*)pActor;
+		Camera::Instance().SetLinkEntity(guid);
 	}
+	m_ActorMap.insert(ActorMap::value_type(guid,pActor));
+}
 
-	void ActorManager::Tick(int nFramTime)
+void ActorManager::Tick(int nFramTime)
+{
+	ActorMap::const_iterator iter = m_ActorMap.begin();
+	for(;iter!=m_ActorMap.end();++iter)
 	{
-		ActorMap::const_iterator iter = m_ActorMap.begin();
-		for(;iter!=m_ActorMap.end();++iter)
+		iter->second->Tick(nFramTime);
+	}
+}
+
+Actor* ActorManager::GetActorByGuid(int guid)
+{		
+	ActorMap::const_iterator iter = m_ActorMap.begin();
+	for(;iter!=m_ActorMap.end();++iter)
+	{
+		if(iter->first == guid)
 		{
-			iter->second->Tick(nFramTime);
+			return iter->second;
 		}
 	}
+	return NULL;
+}

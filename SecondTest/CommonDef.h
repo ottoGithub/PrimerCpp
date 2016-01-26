@@ -8,4 +8,5 @@ const int VOLECITY_RUN = 96;
 
 const int ANIM_PLAY_FRAME_COUNT = 4;
 
+
 #endif

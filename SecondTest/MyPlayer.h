@@ -10,9 +10,9 @@ public:
 	MyPlayer();
 	~MyPlayer();
 	void Tick(int nFrameTime);
-	void PostKeyEvent(SDL_KeyboardEvent& e);
+	void PostKeyEvent(SDL_Event& e);
 
 public:
-	void CalculateDirection();
+	//void CalculateDirection();
 };
 #endif

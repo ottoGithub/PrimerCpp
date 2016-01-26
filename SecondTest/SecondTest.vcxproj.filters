@@ -13,11 +13,14 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="SDLEngine">
+      <UniqueIdentifier>{db101577-e32c-4b95-8b7d-05e50ceffd3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Physics">
+      <UniqueIdentifier>{c0d5cd9c-d9f3-4981-bcc9-0b6a0b6f29e3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="LTexture.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="Singleton.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -54,11 +57,20 @@
     <ClInclude Include="KeyEventListenerManager.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LTexture.h">
+      <Filter>SDLEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="Tile.h">
+      <Filter>SDLEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysicsFunctions.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="LTexture.cpp">
-      <Filter>头文件</Filter>
-    </ClCompile>
     <ClCompile Include="Singleton.cpp">
       <Filter>头文件</Filter>
     </ClCompile>
@@ -92,5 +104,25 @@
     <ClCompile Include="KeyEventListenerManager.cpp">
       <Filter>头文件</Filter>
     </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LTexture.cpp">
+      <Filter>SDLEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Tile.cpp">
+      <Filter>SDLEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="PhysicsFunctions.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ytty.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="boy.png">
+      <Filter>资源文件</Filter>
+    </None>
   </ItemGroup>
 </Project>

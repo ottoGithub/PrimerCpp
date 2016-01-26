@@ -18,7 +18,7 @@ void KeyEventListenerManager::RemoveListener(IEventListener* listener)
 	}
 }
 
-void KeyEventListenerManager::HandlerKeyEvent(SDL_KeyboardEvent& e)
+void KeyEventListenerManager::HandlerEvent(SDL_Event& e)
 {
 	std::vector<IEventListener*>::const_iterator iter;
 	for(iter = m_Listeners.begin(); iter != m_Listeners.end(); ++iter)

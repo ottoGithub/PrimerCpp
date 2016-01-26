@@ -9,8 +9,10 @@ public:
 	virtual void Tick(int nFrameTime);
 public:
 	void SetDir(Vector2D& vDir) { m_vDir = vDir; }
-	void SetPos(float x, float y) { m_vPos.x = x ; m_vPos.y = y; }
+	
 	void SetPos(Vector2D& vPos) { m_vPos.x = vPos.x; m_vPos.y = vPos.y; }
+	Vector2D GetPos() { return m_vPos; }
+
 	void SetSpeed(int v) { m_nVelocity = v;}
 
 	void SetGuid(int id) { m_nGuid = id; }
