@@ -4,6 +4,8 @@
 #include "KeyDef.h"
 #include "Singleton.h"
 
+#include <list>
+
 class KeyDirArray
 {
 #define DIRECTION_VALUE 4
@@ -15,8 +17,7 @@ public:
 
 	Vector2D GetCurKeyDirection();
 private:
-	int ArrayCode[DIRECTION_VALUE];
-	int nKeyDirCurIndex;
+	std::list<int> m_listKey;
 };
 
 class KeySet : public Singleton<KeySet>
