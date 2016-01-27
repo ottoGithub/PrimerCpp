@@ -19,6 +19,9 @@
     <Filter Include="Physics">
       <UniqueIdentifier>{c0d5cd9c-d9f3-4981-bcc9-0b6a0b6f29e3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="KeySet">
+      <UniqueIdentifier>{ee2f41f7-9fd0-4967-abd0-7ad4576a94ed}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Singleton.h">
@@ -72,6 +75,12 @@
     <ClInclude Include="TileClipsData.h">
       <Filter>SDLEngine</Filter>
     </ClInclude>
+    <ClInclude Include="KeySet.h">
+      <Filter>KeySet</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyDef.h">
+      <Filter>KeySet</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Singleton.cpp">
@@ -121,6 +130,9 @@
     </ClCompile>
     <ClCompile Include="TileClipsData.cpp">
       <Filter>SDLEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="KeySet.cpp">
+      <Filter>KeySet</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

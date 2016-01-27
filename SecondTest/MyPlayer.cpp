@@ -1,5 +1,6 @@
 #include "StdAfx.h"
 #include "MyPlayer.h"
+#include "KeySet.h"
 
 MyPlayer::MyPlayer()
 {
@@ -26,21 +27,25 @@ void MyPlayer::PostKeyEvent(SDL_Event& e)
 		case SDL_SCANCODE_W:
 			{
 				m_vDir = Vector2D(0,-1);
+				KeySet::Instance().OnDirectionKeyEvent(eDir_Up,eKey_Press);
 				return;
 			}
 		case SDL_SCANCODE_S:
 			{
 				m_vDir = Vector2D(0,1);
+				KeySet::Instance().OnDirectionKeyEvent(eDir_Down,eKey_Press);
 				return;
 			}
 		case SDL_SCANCODE_A:
 			{
 				m_vDir = Vector2D(-1,0);
+				KeySet::Instance().OnDirectionKeyEvent(eDir_Left,eKey_Press);
 				return;
 			}
 		case SDL_SCANCODE_D:
 			{
 				m_vDir = Vector2D(1,0);
+				KeySet::Instance().OnDirectionKeyEvent(eDir_Right,eKey_Press);
 				return;
 			}
 		default:
@@ -57,6 +62,7 @@ void MyPlayer::PostKeyEvent(SDL_Event& e)
 				{
 					m_vDir.y = 0;
 				}
+				KeySet::Instance().OnDirectionKeyEvent(eDir_Up,eKey_Up);
 				return;
 			}
 		case SDL_SCANCODE_S:
@@ -65,6 +71,7 @@ void MyPlayer::PostKeyEvent(SDL_Event& e)
 				{
 					m_vDir.y = 0;
 				}
+				KeySet::Instance().OnDirectionKeyEvent(eDir_Down,eKey_Up);
 				return;
 			}
 		case SDL_SCANCODE_A:
@@ -73,6 +80,7 @@ void MyPlayer::PostKeyEvent(SDL_Event& e)
 				{
 					m_vDir.x = 0;
 				}
+				KeySet::Instance().OnDirectionKeyEvent(eDir_Left,eKey_Up);
 				return;
 			}
 		case SDL_SCANCODE_D:
@@ -81,6 +89,7 @@ void MyPlayer::PostKeyEvent(SDL_Event& e)
 				{
 					m_vDir.x = 0;
 				}
+				KeySet::Instance().OnDirectionKeyEvent(eDir_Right,eKey_Up);
 				return;
 			}
 		default:
