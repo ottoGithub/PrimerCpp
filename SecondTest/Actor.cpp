@@ -1,5 +1,6 @@
 #include "StdAfx.h"
 #include "Actor.h"
+#include "PhysicsFunctions.h"
 
 Actor::Actor() : m_vPos(0,0),m_vDir(0,0)
 {
@@ -16,12 +17,50 @@ Actor::~Actor()
 void Actor::Tick(int nFrameTime)
 {
 	float fFrameTime = nFrameTime / 1000.0f;
-	m_vPos += m_nVelocity * fFrameTime * m_vDir;
-	
-	RenderActor();
+	if(!m_vDir.IsZero(MIN_FLOAT))
+	{
+		DoMove(fFrameTime);
+	}
+
 }
 
-void Actor::RenderActor()
+void Actor::DoMove(float fMoveTime)
+{
+	Vector2D vNewPos = m_vPos + m_nVelocity * fMoveTime * m_vDir;
+	
+	DoBoundaryCheck(vNewPos);
+	DoCheckCollision(vNewPos);
+
+	m_vPos = vNewPos;
+}
+
+void Actor::DoCheckCollision(Vector2D& vPos)
+{
+
+}
+void Actor::DoBoundaryCheck(Vector2D& vPos)
+{
+	//boundary check;
+	if(int(vPos.x) - CHARACTER_W/2 < 0 )
+	{
+		vPos.x = CHARACTER_W/2;
+	}
+	if(int(vPos.x) + CHARACTER_W/2 > LEVEL_WIDTH)
+	{
+		vPos.x = LEVEL_WIDTH - CHARACTER_W/2;
+	}
+	if(int(vPos.y) - CHARACTER_H < 0 )
+	{
+		vPos.y = CHARACTER_W;
+	}
+	if(int(vPos.y)  > LEVEL_HEIGHT)
+	{
+		vPos.y = LEVEL_HEIGHT;
+	}
+
+}
+
+void Actor::RenderActor(SDL_Rect& rectView)
 {
 	static int nFrameCount = 0;
 	nFrameCount %= WALKING_ANIMATION_FRAMES * ANIM_PLAY_FRAME_COUNT;
@@ -46,8 +85,9 @@ void Actor::RenderActor()
 	{
 		nFrameCount = 0;
 	}
+	Vector2D vRealPos = m_vPos + Vector2D(-CHARACTER_W/2, -CHARACTER_H);
 
-	gCharacterTexture.render(int(m_vPos.x), int(m_vPos.y), &gRectCharterAnim[nDirAnimIndex][nFrameCount / ANIM_PLAY_FRAME_COUNT]);
-	
+
+	gCharacterTexture.render(int(vRealPos.x - rectView.x), int(vRealPos.y - rectView.y), &gRectCharterAnim[nDirAnimIndex][nFrameCount / ANIM_PLAY_FRAME_COUNT]);
 	++nFrameCount;
 }

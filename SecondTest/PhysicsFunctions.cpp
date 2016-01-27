@@ -1,19 +1,6 @@
 #include "StdAfx.h"
 #include "PhysicsFunctions.h"
 
-void ConvertToWorldPos(int x, int y, SDL_Rect* pRect, Vector2D& vRealWorldPos)
-{
-	//TODO: 要确立中心点。人物和其他纹理的中心点规则不一致要考虑到
-	int nWidth = 0;
-	int nHeight = 0;
-	if(pRect)
-	{
-		nWidth = pRect->w;
-		nHeight = pRect->h;
-	}
-	vRealWorldPos.x = float(x - nWidth / 2);
-	vRealWorldPos.y = float(y - nHeight);
-}
 
 bool CheckCollision_Rect2Rect( SDL_Rect r1, SDL_Rect r2 )
 {

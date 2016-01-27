@@ -1,6 +1,7 @@
 #include "StdAfx.h"
 #include "Tile.h"
 #include "PhysicsFunctions.h"
+#include "TileClipsData.h"
 
 
 Tile::Tile( int x, int y, int tileType )

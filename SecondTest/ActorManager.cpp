@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include "ActorManager.h"
 #include "MyPlayer.h"
-#include "Camera.h"
 
 ActorManager::ActorManager()
 {
@@ -20,7 +19,6 @@ void ActorManager::CreateActor(int guid, int nActorType)
 		pActor = new MyPlayer();
 		pActor->SetGuid(guid);
 		m_pMyPlayer = (MyPlayer*)pActor;
-		Camera::Instance().SetLinkEntity(guid);
 	}
 	m_ActorMap.insert(ActorMap::value_type(guid,pActor));
 }

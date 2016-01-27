@@ -10,12 +10,15 @@ public:
 	Vector2D& operator=(const Vector2D& rh);
 	Vector2D& operator+=(const Vector2D& rh);
 	Vector2D operator*(const float rh);
+	Vector2D operator+(const Vector2D& rh);
 
 	friend Vector2D operator* (const float lh, const Vector2D& rh); 
 
 public:
 	bool IsZero(float min_value = 0.0f);
 	bool IsEqual(const Vector2D v, float min_value = 0.0f);
+
+	void Normalize();
 public:
 	float x,y;
 };

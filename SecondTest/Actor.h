@@ -16,9 +16,18 @@ public:
 	void SetSpeed(int v) { m_nVelocity = v;}
 
 	void SetGuid(int id) { m_nGuid = id; }
+	int GetGuid() { return m_nGuid; }
+
 	void SetScene(int nSceneID) { m_nSceneID = nSceneID; }
 
-	void RenderActor();
+
+	void RenderActor(SDL_Rect& rectView);
+protected:
+	//暂时不用状态机
+	void DoMove(float fMoveTime);
+	void DoCheckCollision(Vector2D& vPos);
+	void DoBoundaryCheck(Vector2D& vPos);
+
 protected:
 	int m_nGuid;
 

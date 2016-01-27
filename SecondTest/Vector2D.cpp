@@ -1,4 +1,5 @@
 #include "Vector2D.h"
+#include <math.h>
 
 Vector2D::Vector2D(float x, float y)
 {
@@ -38,6 +39,18 @@ Vector2D& Vector2D::operator+=(const Vector2D& rh)
 	return *this;
 }
 
+Vector2D Vector2D::operator+(const Vector2D& rh)
+{
+	Vector2D temp(rh.x + x, rh.y + y);
+	return temp;
+}
+
+void Vector2D::Normalize()
+{
+	float fInvLen = sqrt(x*x + y*x);
+	x *= fInvLen;
+	y *= fInvLen;
+}
 
 bool Vector2D::IsZero(float min_value /* = 0.0f */)
 {

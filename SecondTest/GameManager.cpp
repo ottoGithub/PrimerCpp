@@ -2,6 +2,7 @@
 #include "GameManager.h"
 #include "SceneManager.h"
 #include "ActorManager.h"
+#include "Camera.h"
 
 void GameManager::EnterGameState(int nStateID)
 {
@@ -27,4 +28,6 @@ void GameManager::Tick(int nFrameTime)
 {
 	SceneManager::Instance().Tick(nFrameTime);
 	ActorManager::Instance().Tick(nFrameTime);
+
+	Camera::Instance().Tick(nFrameTime);
 }

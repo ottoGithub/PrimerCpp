@@ -1,6 +1,7 @@
 #include "StdAfx.h"
 #include "Main.h"
 #include <stdio.h>
+#include "TileClipsData.h"
 
 #include "GameManager.h"
 #include "KeyEventListenerManager.h"
@@ -62,6 +63,7 @@ void ShutdownEngine()
 
 }
 
+
 bool GameInitialize()
 {
 	if( !gTileTexture.loadFromFile( "ytty.png" ) )
@@ -74,6 +76,7 @@ bool GameInitialize()
 		printf( "Failed to load Character texture image!\n" );
 		return false;
 	}
+	InitTileClipsData();
 	GameManager::Instance().EnterGameState(eGameState_LoadScene);
 	return true;
 }

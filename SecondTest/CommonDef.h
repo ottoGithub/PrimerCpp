@@ -2,6 +2,8 @@
 #define _COMMON_DEF_H_
 #include "Vector2D.h"
 
+#define FREE_DELETE(p) { if(p) { delete p; p = NULL; } }
+
 const float MIN_FLOAT = 0.0001f;
 
 const int VOLECITY_RUN = 96;

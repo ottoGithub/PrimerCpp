@@ -80,6 +80,7 @@
     <ClInclude Include="Singleton.h" />
     <ClInclude Include="StdAfx.h" />
     <ClInclude Include="Tile.h" />
+    <ClInclude Include="TileClipsData.h" />
     <ClInclude Include="Vector2D.h" />
   </ItemGroup>
   <ItemGroup>
@@ -99,12 +100,14 @@
     <ClCompile Include="Singleton.cpp" />
     <ClCompile Include="StdAfx.cpp" />
     <ClCompile Include="Tile.cpp" />
+    <ClCompile Include="TileClipsData.cpp" />
     <ClCompile Include="Vector2D.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="boy.png" />
+    <None Include="TestScene.map" />
     <None Include="ytty.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
