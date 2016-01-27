@@ -15,7 +15,7 @@ SceneManager::~SceneManager()
 {
 	for(int i = 0; i< TOTAL_TILES; i++)
 	{
-		FREE_DELETE(m_TileSet[i]);
+		SAFE_DELETE(m_TileSet[i]);
 	}
 }
 
