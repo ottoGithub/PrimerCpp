@@ -45,12 +45,12 @@ Vector2D KeyDirArray::GetCurKeyDirection()
 		return Vector2D(0,0);
 	}
 
-	std::list<int>::iterator iter = m_listKey.begin();
-	for(;iter != m_listKey.end();++iter)
-	{
-		printf("%d\t",*iter);
-	}
-	printf("\n");
+	//std::list<int>::iterator iter = m_listKey.begin();
+	//for(;iter != m_listKey.end();++iter)
+	//{
+	//	printf("%d\t",*iter);
+	//}
+	//printf("\n");
 
 
 	switch(m_listKey.front())

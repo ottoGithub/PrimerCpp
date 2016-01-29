@@ -87,7 +87,6 @@ void Actor::RenderActor(SDL_Rect& rectView)
 	}
 	Vector2D vRealPos = m_vPos + Vector2D(-CHARACTER_W/2, -CHARACTER_H);
 
-
 	gCharacterTexture.render(int(vRealPos.x - rectView.x), int(vRealPos.y - rectView.y), &gRectCharterAnim[nDirAnimIndex][nFrameCount / ANIM_PLAY_FRAME_COUNT]);
 	++nFrameCount;
 }
