@@ -6,7 +6,7 @@
 
 const float MIN_FLOAT = 0.0001f;
 
-const int VOLECITY_RUN = 96;
+const int VOLECITY_RUN = 96*4;
 
 const int ANIM_PLAY_FRAME_COUNT = 4;
 

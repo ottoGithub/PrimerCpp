@@ -89,7 +89,7 @@ void GameShutdown()
 
 void GameLoop(int nFrameTime)
 {
-	SDL_SetRenderDrawColor( gRenderer, 0xFF, 0xFF, 0xFF, 0xFF );
+	SDL_SetRenderDrawColor( gRenderer, 0xA8, 0xB2, 0x81, 0xFF );
 	SDL_RenderClear( gRenderer );
 
 	GameManager::Instance().Tick(nFrameTime);

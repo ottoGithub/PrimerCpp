@@ -51,7 +51,7 @@ void Actor::DoBoundaryCheck(Vector2D& vPos)
 	}
 	if(int(vPos.y) - CHARACTER_H < 0 )
 	{
-		vPos.y = CHARACTER_W;
+		vPos.y = CHARACTER_H;
 	}
 	if(int(vPos.y)  > LEVEL_HEIGHT)
 	{
@@ -85,7 +85,7 @@ void Actor::RenderActor(SDL_Rect& rectView)
 	{
 		nFrameCount = 0;
 	}
-	Vector2D vRealPos = m_vPos + Vector2D(-CHARACTER_W/2, -CHARACTER_H);
+	Vector2D vRealPos = GetActorRealPos(m_vPos);
 
 	gCharacterTexture.render(int(vRealPos.x - rectView.x), int(vRealPos.y - rectView.y), &gRectCharterAnim[nDirAnimIndex][nFrameCount / ANIM_PLAY_FRAME_COUNT]);
 	++nFrameCount;

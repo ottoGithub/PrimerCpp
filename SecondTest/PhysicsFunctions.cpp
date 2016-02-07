@@ -1,5 +1,6 @@
 #include "StdAfx.h"
 #include "PhysicsFunctions.h"
+#include "GlobalValue.h"
 
 
 bool CheckCollision_Rect2Rect( SDL_Rect r1, SDL_Rect r2 )
@@ -45,4 +46,9 @@ bool CheckCollision_Rect2Rect( SDL_Rect r1, SDL_Rect r2 )
 
 	//If none of the sides from A are outside B
 	return true;
+}
+
+Vector2D GetActorRealPos(Vector2D& vPos)
+{
+	return (vPos + Vector2D(-CHARACTER_W/2, -CHARACTER_H));
 }

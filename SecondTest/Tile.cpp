@@ -24,7 +24,7 @@ void Tile::render( SDL_Rect& camera )
 	if( CheckCollision_Rect2Rect( camera, mBox ) )
 	{
 		//Show the tile
-		gTileTexture.render( mBox.x - camera.x, mBox.y - camera.y, &gTileClips[ mType ] );
+		gTileTexture.render( mBox.x - camera.x, mBox.y - camera.y, &gTileData[mType].gTileRect );
 	}
 }
 
